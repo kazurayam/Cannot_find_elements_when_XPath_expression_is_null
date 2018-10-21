@@ -4,7 +4,17 @@
    <name>iframe_Example_exampleIFrame</name>
    <tag></tag>
    <elementGuidId>8c0edb48-4548-454c-8bb0-90d9b71eaea1</elementGuidId>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//iframe[@id = 'exampleIFrame']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//iframe[@id='exampleIFrame']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -21,7 +31,7 @@
       <value>exampleIFrame</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
