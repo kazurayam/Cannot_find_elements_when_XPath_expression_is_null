@@ -6,6 +6,6 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://www.angularjshub.com/examples/forms/textinputs/')
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_AngularJS Hub  Text Inputs/iframe_Example_exampleIFrame'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_AngularJS Hub  Text Inputs/iframe_Example_exampleIFrame'), 10)
 
 WebUI.closeBrowser()
