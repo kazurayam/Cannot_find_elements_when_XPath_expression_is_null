@@ -1,0 +1,7 @@
+64c64,67
+<   "selectorCollection" : { },
+---
+>   "selectorCollection" : {
+>     "BASIC" : "//iframe[@id = 'exampleIFrame' and @src = '/code/examples/forms/01_TextInputs/index.demo.php']",
+>     "XPATH" : "//iframe[@id='exampleIFrame']"
+>   },

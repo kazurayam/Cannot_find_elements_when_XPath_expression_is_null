@@ -1,0 +1,91 @@
+{
+  "parentObject" : null,
+  "properties" : [ {
+    "name" : "tag",
+    "condition" : "EQUALS",
+    "value" : "iframe",
+    "active" : true
+  }, {
+    "name" : "id",
+    "condition" : "EQUALS",
+    "value" : "exampleIFrame",
+    "active" : true
+  }, {
+    "name" : "src",
+    "condition" : "EQUALS",
+    "value" : "/code/examples/forms/01_TextInputs/index.demo.php",
+    "active" : true
+  }, {
+    "name" : "xpath",
+    "condition" : "EQUALS",
+    "value" : "id(\"exampleIFrame\")",
+    "active" : false
+  } ],
+  "xpaths" : [ {
+    "name" : "xpath:attributes",
+    "condition" : "EQUALS",
+    "value" : "//iframe[@id='exampleIFrame']",
+    "active" : true
+  }, {
+    "name" : "xpath:idRelative",
+    "condition" : "EQUALS",
+    "value" : "//div[@id='exampleContent']/section[2]/iframe",
+    "active" : false
+  }, {
+    "name" : "xpath:neighbor",
+    "condition" : "EQUALS",
+    "value" : "(.//*[normalize-space(text()) and normalize-space(.)='Example'])[1]/following::iframe[1]",
+    "active" : false
+  }, {
+    "name" : "xpath:neighbor",
+    "condition" : "EQUALS",
+    "value" : "(.//*[normalize-space(text()) and normalize-space(.)='Get the full source code'])[1]/following::iframe[1]",
+    "active" : false
+  }, {
+    "name" : "xpath:neighbor",
+    "condition" : "EQUALS",
+    "value" : "(.//*[normalize-space(text()) and normalize-space(.)='Description'])[1]/preceding::iframe[1]",
+    "active" : false
+  }, {
+    "name" : "xpath:neighbor",
+    "condition" : "EQUALS",
+    "value" : "(.//*[normalize-space(text()) and normalize-space(.)='input'])[5]/preceding::iframe[1]",
+    "active" : false
+  }, {
+    "name" : "xpath:position",
+    "condition" : "EQUALS",
+    "value" : "//section[2]/iframe",
+    "active" : false
+  } ],
+  "objectId" : "Object Repository/Page_AngularJS Hub  Text Inputs/iframe_Example_exampleIFrame",
+  "imagePath" : null,
+  "useRelativeImagePath" : false,
+  "selectorMethod" : "XPATH",
+  "selectorCollection" : {
+    "BASIC" : "//iframe[@id = 'exampleIFrame' and @src = '/code/examples/forms/01_TextInputs/index.demo.php']",
+    "XPATH" : "//iframe[@id='exampleIFrame']"
+  },
+  "parentObjectShadowRoot" : false,
+  "activeProperties" : [ {
+    "name" : "tag",
+    "condition" : "EQUALS",
+    "value" : "iframe",
+    "active" : true
+  }, {
+    "name" : "id",
+    "condition" : "EQUALS",
+    "value" : "exampleIFrame",
+    "active" : true
+  }, {
+    "name" : "src",
+    "condition" : "EQUALS",
+    "value" : "/code/examples/forms/01_TextInputs/index.demo.php",
+    "active" : true
+  } ],
+  "activeXpaths" : [ {
+    "name" : "xpath:attributes",
+    "condition" : "EQUALS",
+    "value" : "//iframe[@id='exampleIFrame']",
+    "active" : true
+  } ]
+}
