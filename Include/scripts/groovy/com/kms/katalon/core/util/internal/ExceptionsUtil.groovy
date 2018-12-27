@@ -33,53 +33,28 @@ public class ExceptionsUtil {
 	private static String getExceptionMessage(MissingPropertyException exception) {
 		return "Variable '" + exception.getProperty() + "' is not defined for test case.";
 	}
-/*
+
 	public static String getStackTraceForThrowable(Throwable t) {
 		t = StackTraceUtils.deepSanitize(t);
-		StackTraceElement[] newStackTrace = Arrays.stream(t.getStackTrace())
-		.map(stackTraceElement -> {
-			String declaringClass = stackTraceElement.getClassName();
-			if (CLASS_PATTERN.matcher(declaringClass).matches()) {
-				declaringClass = ScriptEngine.getTestCaseName(declaringClass);
-				if (declaringClass != null) {
-					return new StackTraceElement(
-					declaringClass,
-					stackTraceElement.getMethodName(),
-					declaringClass,
-					stackTraceElement.getLineNumber());
-				}
-			}
-			return stackTraceElement;
-		})
-		.collect(Collectors.toList())
-		.toArray(new StackTraceElement[] {});
-		t.setStackTrace(newStackTrace);
-		String stackTrace = Throwables.getStackTraceAsString(t);
-		return stackTrace;
-	}
-}
-*/
-	public static String getStackTraceForThrowable(Throwable t) {
-		t = StackTraceUtils.deepSanitize(t);
-		def cl = { stackTraceElement ->
-			String declaringClass = stackTraceElement.getClassName();
-			if (CLASS_PATTERN.matcher(declaringClass).matches()) {
-				declaringClass = ScriptEngine.getTestCaseName(declaringClass);
-				if (declaringClass != null) {
-					return new StackTraceElement(
-					declaringClass,
-					stackTraceElement.getMethodName(),
-					declaringClass,
-					stackTraceElement.getLineNumber());
-				}
-			}
-			return stackTraceElement;
-		};
-		StackTraceElement[] newStackTrace = 
-			Arrays.stream(t.getStackTrace())
-				.map(cl)
+
+		StackTraceElement[] newStackTrace =
+				Arrays.stream(t.getStackTrace())
+				.map({ stackTraceElement ->
+					String declaringClass = stackTraceElement.getClassName();
+					if (CLASS_PATTERN.matcher(declaringClass).matches()) {
+						declaringClass = ScriptEngine.getTestCaseName(declaringClass);
+						if (declaringClass != null) {
+							return new StackTraceElement(
+								declaringClass,
+								stackTraceElement.getMethodName(),
+								declaringClass,
+								stackTraceElement.getLineNumber());
+						}
+					}
+					return stackTraceElement;
+				})
 				.collect(Collectors.toList()) as StackTraceElement[];
-		
+
 		t.setStackTrace(newStackTrace);
 		String stackTrace = Throwables.getStackTraceAsString(t);
 		return stackTrace;
